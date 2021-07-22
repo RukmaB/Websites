@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1>Photo Gallery</h1>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Photo Gallery</title>
+	<link rel="stylesheet" type="text/css" href="./css/Photo_Gallery.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<script type="text/javascript">
+		function gallery(e){
+			var main_corousel = document.getElementById('main_corousel');
+			big_images.src = e.firstElementChild.src
+		}
+	</script>
+</head>
+<body>
+	<div class="Photo_Gallery">
+		<div id="big">
+			<img src="./images/image1.jpeg" id="big_images">
+		</div>
+	<div class="main_corousel">
+		<div class="cell" id="img1" onclick="gallery(img1);"><img src="./images/image1.jpeg" alt="Apple tree"></div>
+		<div class="cell" id="img2" onclick="gallery(img2);"><img src="./images/image2.jpeg" alt="Orange juice"></div>
+		<div class="cell" id="img3" onclick="gallery(img3);"><img src="./images/image3.jpeg" alt="Grapes"></div>
+		<div class="cell" id="img4" onclick="gallery(img4);"><img src="./images/image4.jpeg" alt="Apple"></div>
+		<div class="cell" id="img5" onclick="gallery(img5);"><img src="./images/image5.jpeg" alt="Blueberries"></div>
+		<div class="cell" id="img6" onclick="gallery(img6);"><img src="./images/image6.jpeg" alt="Lemon"></div>
+		<div class="cell" id="img7" onclick="gallery(img7);"><img src="./images/image7.jpeg" alt="Stawberry bluebackground"></div>
+		<div class="cell" id="img8" onclick="gallery(img8);"><img src="./images/image8.jpeg" alt="stawberry"></div>
+		<div class="cell" id="img9" onclick="gallery(img9);"><img src="./images/image9.jpeg" alt="Apples"></div>
+		<div class="cell" id="img10" onclick="gallery(img10);"><img src="./images/image10.jpeg" alt="Fruits"></div>
+	</div>
+	</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+	$(".main_corousel").flickity({
+		cellAlign:'left',
+		wrapAround:true,
+		freeScroll:true
+	});
+</script>
+</body>
+</html>
